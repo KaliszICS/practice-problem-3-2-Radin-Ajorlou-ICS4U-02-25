@@ -4,23 +4,19 @@ public class PracticeProblem {
 	static int INITIAL = 0;
 	public static void main(String args[]) {
 
-		System.out.println(towerOfHanoi(8));
+		System.out.println(towerOfHanoi(3));
 
 	}
 
 
 	public static int towerOfHanoi(int num){
 
-		if (INITIAL == 0){
-			INITIAL = num;
-		}
-
-		if (INITIAL < 3){
+		if (num < 3){
 			return -1;
 		} 
 
-		if (num == 1){
-			return 1;
+		if (num == 3){
+			return 7;
 		}
 
 		return 2 * towerOfHanoi(num - 1) + 1;
